@@ -12,9 +12,16 @@
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function (user) {
+        const hash = window.location.hash || "";
+
+        if (hash.includes("recovery_token=")) {
+          window.netlifyIdentity.open("login");
+          return;
+        }
+
         if (!user) {
           window.netlifyIdentity.on("login", function () {
-            document.location.href = "/admin/";
+            window.location.href = "/admin/";
           });
         }
       });
