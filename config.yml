@@ -1,0 +1,55 @@
+backend:
+  name: turbo-github
+  turbo_site_id: REPLACE_WITH_DECAP_TURBO_SITE_ID
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "village_content"
+    label: "Village content"
+    files:
+      - name: "site"
+        label: "Village introduction, updates and photos"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Village introduction"
+            name: "intro"
+            widget: "text"
+            required: true
+          - label: "Community announcements"
+            name: "announcements"
+            widget: "list"
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                format: "YYYY-MM-DD"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Details"
+                name: "body"
+                widget: "text"
+          - label: "Village photo gallery"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                required: true
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+                required: false
+          - label: "Public contact link (optional)"
+            name: "contact"
+            widget: "string"
+            required: false
