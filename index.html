@@ -1,11 +1,127 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rajpalwan Website Admin</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123c2f">
+<title>Rajpalwan Village | Himachal Pradesh</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fbf8f0;color:#24352c;line-height:1.6}
+header{background:#123c2f;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header a{color:white;text-decoration:none;margin-right:14px}
+.hero{padding:90px 7%;color:white;background:linear-gradient(120deg,#123c2f,#39735a)}
+.hero h1{font-size:clamp(38px,7vw,68px);line-height:1.1;margin:12px 0}
+.hero p{font-size:18px;max-width:650px}
+.btn{display:inline-block;background:#e8b65a;color:#123c2f;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold;margin:8px 8px 0 0}
+section{padding:55px 7%}
+h2{color:#123c2f;font-size:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border:1px solid #e0e7df;border-radius:12px;padding:22px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.gallery img{width:100%;height:210px;object-fit:cover;border-radius:12px}
+.about{background:white}
+iframe{width:100%;height:360px;border:0;border-radius:12px}
+.links a{display:block;background:white;padding:18px;margin:12px 0;border-radius:10px;color:#123c2f;text-decoration:none;border:1px solid #e0e7df}
+footer{background:#0c2c22;color:white;padding:28px 7%;line-height:1.9}
+footer a{color:#e8b65a}
+.small{font-size:13px;color:#d4e0d8}
+</style>
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<header>
+  <strong>⌂ Rajpalwan Village</strong>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#map">Map</a>
+    <a href="#updates">Updates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <p>OUR VILLAGE · OUR ROOTS · OUR COMMUNITY</p>
+  <h1>Welcome to<br>Rajpalwan Village</h1>
+  <p>A community website celebrating our village, its people and our connection to Himachal Pradesh.</p>
+  <a class="btn" href="#about">Explore Our Village</a>
+  <a class="btn" href="#map">View Village Map</a>
+</section>
+
+<section class="about" id="about">
+  <h2>About Rajpalwan</h2>
+  <p>Welcome to Rajpalwan Village. This website is a place to share village information, photographs, useful links and community updates with residents, families and visitors.</p>
+  <p><strong>Location:</strong> Rajpalwan, Himachal Pradesh, India</p>
+  <p>Village history and local details can be added after verification with residents or official records. This is an independent community website, not an official government portal.</p>
+</section>
+
+<section>
+  <h2>Explore Our Village</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>📍 Village Map</h3>
+      <p>Find Rajpalwan using Google Maps and explore available map layers.</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rajpalwan%2C%20Himachal%20Pradesh%2C%20India" target="_blank" rel="noopener">Open Google Maps ↗</a>
+    </div>
+    <div class="card">
+      <h3>📷 Photo Gallery</h3>
+      <p>View illustrative Himachal nature photos. Replace them with actual Rajpalwan photographs when available.</p>
+    </div>
+    <div class="card">
+      <h3>📰 Official Information</h3>
+      <p>Access official state and district websites for public information and announcements.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="gallery">
+  <h2>Photo Gallery — Himachal Scenery</h2>
+  <p>These sample photographs show Himalayan and nature scenery; they are not verified photos of Rajpalwan.</p>
+  <div class="gallery">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80" alt="Himalayan mountain landscape">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=800&q=80" alt="Green mountain valley">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Mountain peaks at night">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="Lake and mountain scenery">
+  </div>
+</section>
+
+<section id="map">
+  <h2>Find Rajpalwan on Google Maps</h2>
+  <p>If multiple results appear, select the correct Rajpalwan location.</p>
+  <iframe title="Google Maps search for Rajpalwan" loading="lazy" src="https://maps.google.com/maps?q=Rajpalwan%2C%20Himachal%20Pradesh%2C%20India&z=11&output=embed"></iframe>
+  <p><a href="https://www.google.com/maps/search/?api=1&query=Rajpalwan%2C%20Himachal%20Pradesh%2C%20India" target="_blank" rel="noopener">Open full Google Maps for directions and satellite view ↗</a></p>
+</section>
+
+<section class="about" id="updates">
+  <h2>Official Himachal & Kangra Updates</h2>
+  <p>Visit these government portals for current notices and announcements. Updates are not automatically displayed on this website.</p>
+  <div class="links">
+    <a href="https://himachal.gov.in/" target="_blank" rel="noopener"><strong>Government of Himachal Pradesh ↗</strong><br>State government information and services.</a>
+    <a href="https://hpkangra.nic.in/" target="_blank" rel="noopener"><strong>District Kangra Official Website ↗</strong><br>District notices, recruitment and public services.</a>
+    <a href="https://himachal.nic.in/" target="_blank" rel="noopener"><strong>Himachal Pradesh Information Portal ↗</strong><br>Government directories and information.</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact the Website Maintainer</h2>
+  <p>Have a verified village update or suitable local photograph to share? Get in touch.</p>
+  <a class="btn" href="tel:9518085026">Call Ajay Mehra</a>
+  <a class="btn" href="mailto:amehra488@gmail.com">Send Email</a>
+</section>
+</main>
+
+<footer>
+  <strong>Rajpalwan Village</strong><br>
+  Created &amp; Maintained by <strong>Ajay Mehra</strong><br>
+  Phone: <a href="tel:9518085026">9518085026</a><br>
+  Email: <a href="mailto:amehra488@gmail.com">amehra488@gmail.com</a>
+  <p class="small">Independent community website. Not an official government portal.</p>
+  <p class="small">© <span id="year"></span> Rajpalwan Village</p>
+</footer>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
